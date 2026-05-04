@@ -4,9 +4,12 @@ Android app para gestión masiva de CPEs Ubiquiti para WISPs.
 
 Permite:
 - Gestión de múltiples CPEs via SSH
-- Cambiosbulk en lote
+- Cambios bulk en lote
 - Sistema Pending Changes (Test de 3 min)
 - Interfaz estilo Ubiquiti
+
+## Build
+[![Build APK](https://github.com/solor990-ui/EMNGER/actions/workflows/build.yml/badge.svg)](https://github.com/solor990-ui/EMNGER/actions)
 
 ## Especificaciones
 
