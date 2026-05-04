@@ -2,12 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permisos necesarios -->
+    <!-- Internet para SSH -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     
-    <!-- SSH usa sockets -->
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- Feature: WiFi (no required) -->
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -30,11 +30,6 @@
             </intent-filter>
         </activity>
         
-        <!-- PWA -->
-        <meta-data
-            android:name="viewport"
-            android:value="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-            
     </application>
 
 </manifest>
