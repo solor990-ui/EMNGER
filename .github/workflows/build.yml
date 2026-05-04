@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout code
@@ -21,14 +23,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Setup Gradle
-      uses: gradle/gradle-build-action@v2
-
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+    - name: Create gradle wrapper
+      uses: gradle/wrapper-gradle-action@v3
+      with:
+        gradle-version: 8.5
 
     - name: Build with Gradle
-      run: ./gradlew assembleDebug --no-daemon
+      run: ./gradlew assembleDebug --no-daemon -q
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
